@@ -1,10 +1,16 @@
+//librerías
 import React from 'react'
+//componentes
+import Header from './Header'
+
+//estilos
 import '../assets/styles/App.scss'
 
 function App () {
   return (
-    <h1>By Now this page is under construction</h1>
-
+    <React.Fragment>
+      <Header />
+    </React.Fragment>
   )
 }
 
