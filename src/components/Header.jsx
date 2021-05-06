@@ -1,6 +1,8 @@
 import React from 'react'
-import logo_platzi_bw2 from '../assets/logo-platzi-video-BW2.png'
-import user_icon from '../assets/user-icon.png'
+
+//assets
+import logo_platzi_bw2 from '../assets/images/logo-platzi-video-BW2.png'
+import user_icon from '../assets/images/user-icon.png'
 
 //Estilos
 import '../assets/styles/components/Header.scss'
