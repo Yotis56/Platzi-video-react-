@@ -3,11 +3,11 @@ import React from 'react'
 //styles
 import '../assets/styles/components/Categories.scss'
 
-function Categories ({ children }) {
+function Categories (props) {
   return (
     <div className="categories">
-      <h3 className="categories__title">Mi lista</h3>
-      {children}
+      <h3 className="categories__title">{props.text}</h3>
+      {props.children}
     </div>
   )
 }
