@@ -1,7 +1,7 @@
 {
   "name": "platzi-video",
-  "version": "1.0.0",
-  "description": "Platzi video page. Made in Platzi's practic react course",
+  "version": "2.0.0",
+  "description": "Platzi video page. Made in Platzi's React course",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,8 @@
   "keywords": [
     "Platzi-video",
     "React",
+    "Router",
+    "Redux",
     "SPA"
   ],
   "author": "Johnatan Arango <ingyotis@gmail.com>",
