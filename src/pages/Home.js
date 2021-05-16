@@ -5,20 +5,19 @@ import React from 'react'
 import useInitialState from '../hooks/useInitialState'
 
 //componentes
-import Header from './Header'
-import Search from './Search'
-import Main from './Main'
-import Footer from './Footer'
+import Header from '../components/Header'
+import Search from '../components/Search'
+import Main from '../components/Main'
+import Footer from '../components/Footer'
 
 //estilos
 import '../assets/styles/App.scss'
 
-function App () {
+function Home () {
 
   const API = 'http://localhost:3000/initialState'
   const initialState = useInitialState(API)
 
-  
   return (
     <React.Fragment>
       <Header />
@@ -32,4 +31,4 @@ function App () {
   )
 }
 
-export default App
+export default Home

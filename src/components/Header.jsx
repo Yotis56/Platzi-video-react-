@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 //assets
 import logo_platzi_bw2 from '../assets/images/logo-platzi-video-BW2.png'
@@ -17,7 +18,9 @@ function Header () {
           <p>Perfil</p>
         </div>
         <ul>
-          <li><a href="/">Cuenta</a></li>
+          <li>
+            <Link to="/login">Cuenta</Link>
+          </li>
           <li><a href="/">Cerrar sesión</a></li>
         </ul>
       </div>
