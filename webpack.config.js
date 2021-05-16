@@ -45,6 +45,10 @@ module.exports = {
       },
     ]
   },
+  devServer: {
+    open: true,
+    historyApiFallback: true,
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
@@ -54,8 +58,4 @@ module.exports = {
       filename: 'assets/[name].css'
     })
   ],
-  devServer: {
-    open: true,
-  },
-
 }

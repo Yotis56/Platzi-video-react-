@@ -1,0 +1,111 @@
+@import "../Vars.scss";
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login {
+  background: linear-gradient(#21c08b, #ab88ff);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  padding: 0 30px;
+  min-height: calc(100vh - 200px);
+  &-header {
+    background: #21c08b;
+  }
+  &-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: $text-color;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    & label {
+      font-size: 14px;
+    }
+  }
+  &-remember {
+    color: $text-color;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    & a {
+      color: $text-color;
+      font-size: 14px;
+    }
+  }
+  &-social > div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  &-social img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  &-register {
+    font-size: 14px;
+    & a {
+      color: $text-color;
+      font-weight: 600;
+    }
+  }
+  &-input {
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    outline: none;
+    height: 50px;
+    &::placeholder {
+      color: $text-color;
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: 16px;
+    }
+  }
+  &-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: $text-color;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Noto Sans TC", sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+  }
+}
+
+.footer a {
+  color: $text-color;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+}
+
+.login-footer {
+  background: #ab88ff;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
