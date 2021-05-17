@@ -20,7 +20,7 @@ function Home () {
 
   return (
     <React.Fragment>
-      <Header />
+      <Header loginIcon="true" />
       <Search 
         title="¿Qué quieres ver hoy?"
         placeholder_text="Buscar..."
