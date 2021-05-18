@@ -1,14 +1,11 @@
 import React from 'react'
-
-//components
-import Header from '../components/Header'
+import { Link } from 'react-router-dom'
 
 //styles
 import '../assets/styles/pages/Register.scss'
 
 const Register = () => (
   <React.Fragment>
-    <Header loginIcon="false"/>
     <section className='register'>
       <section className='register__container'>
         <h2>Regístrate</h2>
@@ -18,7 +15,7 @@ const Register = () => (
           <input className='input' type='password' placeholder='Contraseña' />
           <button className='button'>Registrarme</button>
         </form>
-        <a href=''>Iniciar sesión</a>
+        <Link to="/login">Iniciar sesión</Link>
       </section>
     </section>
   </React.Fragment>

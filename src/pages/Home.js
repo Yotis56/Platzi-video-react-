@@ -5,10 +5,8 @@ import React from 'react'
 import useInitialState from '../hooks/useInitialState'
 
 //componentes
-import Header from '../components/Header'
 import Search from '../components/Search'
 import Main from '../components/Main'
-import Footer from '../components/Footer'
 
 //estilos
 import '../assets/styles/App.scss'
@@ -20,13 +18,11 @@ function Home () {
 
   return (
     <React.Fragment>
-      <Header loginIcon="true" />
       <Search 
         title="¿Qué quieres ver hoy?"
         placeholder_text="Buscar..."
       />
       <Main data={initialState}/>
-      <Footer />
     </React.Fragment>
   )
 }

@@ -1,9 +1,5 @@
 import React from 'react'
-
-//components
-import Header from '../components/Header'
-import Footer from '../components/Footer'
- 
+import { Link } from 'react-router-dom'
 //assets
 import googleIcon from '../assets/images/google-icon.png'
 import twitterIcon from '../assets/images/twitter-icon.png'
@@ -14,7 +10,6 @@ import '../assets/styles/pages/Login.scss'
 const Login = () => {
   return (
     <React.Fragment>
-      <Header />
       <section className="login">
         <div className="login-container">
           <h2 className="login-title">Inicia sesion</h2>
@@ -31,11 +26,9 @@ const Login = () => {
             <div><img src={googleIcon} alt="Google" /> inicia sesión con Google</div>
             <div><img src={twitterIcon} alt="twitter" /> inicia sesión con twitter</div>
           </div>
-          <p className="login-register">¿No tienes ninguna cuenta? <a href="#">Registrate</a></p>
+          <p className="login-register">¿No tienes ninguna cuenta? <Link to="/register">Registrate</Link></p>
         </div>
       </section>
-      
-      <Footer />  
     </React.Fragment>
   )
 }
