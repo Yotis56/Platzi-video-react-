@@ -20,7 +20,7 @@ const App = () => (
       </Switch>
     </Layout>
   </BrowserRouter>
-
 )
 //para que las rutas funcionen, hay que añadir en el webapck.config.js el historyApiFallback = true en dev server.
+ 
  export default App

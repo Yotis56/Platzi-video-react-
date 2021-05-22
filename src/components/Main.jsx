@@ -10,9 +10,9 @@ import Carousel from './Carousel'
 const Main = ({data}) => (
   <React.Fragment>
 
-    {data.mylist.length > 0 && 
+    {data.myList.length > 0 && 
       <Categories text="Mi lista">
-        <Carousel videos={data.mylist} />
+        <Carousel videos={data.myList} />
       </Categories>
     }
 

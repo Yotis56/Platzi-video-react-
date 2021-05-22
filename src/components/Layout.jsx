@@ -2,12 +2,14 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = (props) => (
- <React.Fragment>
+const Layout = ({children}) => {
+return (
+ <>
    <Header />
-    {props.chidren}
+    {children}
    <Footer />
- </React.Fragment> 
-)
+ </>
+ ) 
+}
 
 export default Layout
