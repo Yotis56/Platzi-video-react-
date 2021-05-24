@@ -20,8 +20,8 @@ function Header () {
           <p>Perfil</p>
         </div>
         <ul>
-          <li><Link to="/login">Cuenta</Link></li>
-          <li><Link to="/register">Iniciar sesión</Link></li>
+          <li><Link to="#">Cuenta</Link></li>
+          <li><Link to="/login">Iniciar sesión</Link></li>
         </ul>
       </div>
         {/* {
