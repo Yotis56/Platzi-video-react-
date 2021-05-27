@@ -1,24 +1,67 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+//actions
+import { registerRequest } from '../actions'
 
 //styles
 import '../assets/styles/pages/Register.scss'
 
-const Register = () => (
-  <React.Fragment>
-    <section className='register'>
-      <section className='register__container'>
-        <h2>Regístrate</h2>
-        <form className='register__container--form'>
-          <input className='input' type='text' placeholder='Nombre' />
-          <input className='input' type='text' placeholder='Correo' />
-          <input className='input' type='password' placeholder='Contraseña' />
-          <button className='button'>Registrarme</button>
-        </form>
-        <Link to="/login">Iniciar sesión</Link>
-      </section>
-    </section>
-  </React.Fragment>
-)
+const Register = (props) => {
+  const [form, setValues] = useState({
+    email: '',
+    name: '',
+    password: '',
+  })
 
-export default Register 
+  const handleInput = event => {
+    setValues({
+      ...form, 
+      [event.target.name]: event.target.value,
+    })
+  }
+  const handleSubmit = event => {
+    event.preventDefault()
+    props.registerRequest(form)
+  }
+  return (
+    <React.Fragment>
+      <section className='register'>
+        <section className='register__container'>
+          <h2>Regístrate</h2>
+          <form className='register__container--form' onSubmit={handleSubmit}>
+            <input 
+              className='input' 
+              name='name'
+              type='text' 
+              placeholder='Nombre' 
+              onChange={handleInput}
+            />
+            <input 
+              className='input' 
+              name='email'
+              type='text' 
+              placeholder='Correo'
+              onChange={handleInput}
+            />
+            <input 
+              className='input' 
+              name='password'
+              type='password' 
+              placeholder='Contraseña'
+              onChange={handleInput} 
+            />
+            <button className='button'>Registrarme</button>
+          </form>
+          <Link to="/login">Iniciar sesión</Link>
+        </section>
+      </section>
+    </React.Fragment>
+  )
+}
+
+const mapDispatchToProps = {
+  registerRequest,
+}
+
+export default connect(null, mapDispatchToProps)(Register) 
