@@ -23,6 +23,7 @@ const Register = (props) => {
   const handleSubmit = event => {
     event.preventDefault()
     props.registerRequest(form)
+    props.history.push('/')
   }
   return (
     <React.Fragment>
