@@ -48,6 +48,8 @@
 
       & img {
         margin-right: 8px;
+        height: 50px;
+        border-radius: 25%;
       }
 
       & p {
@@ -57,4 +59,8 @@
       }
     }
   }
+}
+
+.greenHeader {
+  background-color: #21c08b;
 }

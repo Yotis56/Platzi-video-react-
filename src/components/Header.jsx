@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { connect } from 'react-redux'
 //actions
 import { logoutRequest } from '../actions'
@@ -18,9 +18,11 @@ function Header (props) {
   const handleLogout = () => {
     props.logoutRequest({}) 
   }
+  //hacemos la comprobación de en dónde estamos, para cambiar estilos
+  const headerClass = (useLocation().pathname === '/register' || useLocation().pathname === '/login') ? 'header greenHeader' : 'header'
 
   return (
-    <header className="header">
+    <header className={headerClass}>
       <Link to="/">
         <img src={logo_platzi_bw2} alt="platzi logo" className="header__img"/>
       </Link>
