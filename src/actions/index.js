@@ -4,6 +4,7 @@ export const actions = {
   login: 'LOGIN_REQUEST',
   logout: 'LOGOUT_REQUEST',
   register: 'REGISTER_REQUEST',
+  getVideo: 'GET_VIDEO_SOURCE',
 }
 
 export const setFavorite = payload => ({
@@ -31,5 +32,9 @@ export const registerRequest = payload => ({
   payload
 })
 
+export const getVideoSource = payload => ({
+  type: actions.getVideo,
+  payload
+})
 
 //acá la acción recibe información sobre lo que tiene que añadir (payload) y devolvemos el tipo de acción con la información que se añadió.
