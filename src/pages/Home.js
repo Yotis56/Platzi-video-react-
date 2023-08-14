@@ -1,40 +1,40 @@
 //librerías
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
 //custom hooks
 // import useInitialState from '../hooks/useInitialState'
 
 //componentes
-import Search from '../components/Search'
-import Main from '../components/Main'
+import Search from '../components/Search';
+import Main from '../components/Main';
 
 //estilos
-import '../assets/styles/App.scss'
+import '../assets/styles/App.scss';
 
 // const API = 'http://localhost:3000/initialState'
 // const initialState = useInitialState(API)
 
-function Home ({myList, trends, originals}) {
+function Home({ myList, trends, originals }) {
   const list = {
-    myList: myList,
-    trends: trends, 
-    originals: originals, 
-  }
+    myList,
+    trends,
+    originals,
+  };
   return (
-    <React.Fragment>
-      <Search 
-        title="¿Qué quieres ver hoy?"
-        placeholder_text="Buscar..."
+    <>
+      <Search
+        title='¿Qué quieres ver hoy?'
+        placeholder_text='Buscar...'
       />
-      <Main data={list}/>
-    </React.Fragment>
-  )
+      <Main data={list} />
+    </>
+  );
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     myList: state.myList,
     trends: state.trends,
     originals: state.originals,
-  }
-}
-export default connect(mapStateToProps)(Home)
+  };
+};
+export default connect(mapStateToProps)(Home);
