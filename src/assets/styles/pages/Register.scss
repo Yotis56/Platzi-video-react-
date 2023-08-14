@@ -30,10 +30,22 @@
         text-decoration: underline;
       }
     }
-
     &--form {
       display: flex;
       flex-direction: column;
+    }
+    & button {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 25px;
+      color: #fbf6fd;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: "Noto Sans TC", sans-serif;
+      height: 50px;
+      letter-spacing: 1px;
+      margin: 10px 0;
     }
   }
 }

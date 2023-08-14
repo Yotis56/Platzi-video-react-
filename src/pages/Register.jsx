@@ -1,68 +1,70 @@
-import React, { useState } from 'react'
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 //actions
-import { registerRequest } from '../actions'
+import { registerRequest } from '../actions';
 
 //styles
-import '../assets/styles/pages/Register.scss'
+import '../assets/styles/pages/Register.scss';
 
 const Register = (props) => {
   const [form, setValues] = useState({
     email: '',
     name: '',
     password: '',
-  })
+  });
 
-  const handleInput = event => {
+  const handleInput = (event) => {
     setValues({
-      ...form, 
+      ...form,
       [event.target.name]: event.target.value,
-    })
-  }
-  const handleSubmit = event => {
-    event.preventDefault()
-    props.registerRequest(form)
-    props.history.push('/')
-  }
+    });
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.registerRequest(form);
+    props.history.push('/');
+  };
   return (
-    <React.Fragment>
+    <>
       <section className='register'>
         <section className='register__container'>
           <h2>Regístrate</h2>
           <form className='register__container--form' onSubmit={handleSubmit}>
-            <input 
-              className='input' 
+            <input
+              className='input'
               name='name'
-              type='text' 
-              placeholder='Nombre' 
+              type='text'
+              placeholder='Nombre'
               onChange={handleInput}
             />
-            <input 
-              className='input' 
+            <input
+              className='input'
               name='email'
-              type='text' 
+              type='text'
               placeholder='Correo'
               onChange={handleInput}
             />
-            <input 
-              className='input' 
+            <input
+              className='input'
               name='password'
-              type='password' 
+              type='password'
               placeholder='Contraseña'
-              onChange={handleInput} 
+              onChange={handleInput}
             />
-            <button className='button'>Registrarme</button>
+            <button type='submit' className='button'>
+              Registrarme
+            </button>
           </form>
-          <Link to="/login">Iniciar sesión</Link>
+          <Link to='/login'>Iniciar sesión</Link>
         </section>
       </section>
-    </React.Fragment>
-  )
-}
+    </>
+  );
+};
 
 const mapDispatchToProps = {
   registerRequest,
-}
+};
 
-export default connect(null, mapDispatchToProps)(Register) 
+export default connect(null, mapDispatchToProps)(Register);

@@ -5,18 +5,28 @@ import CarouselItem from './CarouselItem';
 //styles
 import '../assets/styles/components/Carousel.scss';
 
-const Carousel = (props) => {
-  const from = props.from
+const Carousel = ({ from, videos }) => {
   return (
-    <section className="carousel">
-      <div className="carousel__container">
+    <section className='carousel'>
+      <div className='carousel__container'>
         {
-          props.videos.map((video) => (
-            <CarouselItem from={from} key={video.id} {...video} />
+          videos.map((video) => (
+            <CarouselItem
+              from={from}
+              key={video.id}
+              id={video.id}
+              cover={video.cover}
+              title={video.title}
+              year={video.year}
+              contentRating={video.contentRating}
+              duration={video.duration}
+              description={video.description}
+            />
           ))
         }
       </div>
     </section>
-)}
+  );
+};
 
 export default Carousel;

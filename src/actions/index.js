@@ -5,36 +5,36 @@ export const actions = {
   logout: 'LOGOUT_REQUEST',
   register: 'REGISTER_REQUEST',
   getVideo: 'GET_VIDEO_SOURCE',
-}
+};
 
-export const setFavorite = payload => ({
+export const setFavorite = (payload) => ({
   type: actions.setFavorite,
   payload,
-})
+});
 
-export const deleteFavorite = payload => ({
-  type: actions.deleteFavorite, 
+export const deleteFavorite = (payload) => ({
+  type: actions.deleteFavorite,
   payload,
-})
+});
 
-export const loginRequest = payload => ({
+export const loginRequest = (payload) => ({
   type: actions.login,
-  payload
-})
-
-export const logoutRequest = payload => ({
-  type: actions.logout, 
   payload,
-})
+});
 
-export const registerRequest = payload => ({
+export const logoutRequest = (payload) => ({
+  type: actions.logout,
+  payload,
+});
+
+export const registerRequest = (payload) => ({
   type: actions.register,
-  payload
-})
+  payload,
+});
 
-export const getVideoSource = payload => ({
+export const getVideoSource = (payload) => ({
   type: actions.getVideo,
-  payload
-})
+  payload,
+});
 
 //acá la acción recibe información sobre lo que tiene que añadir (payload) y devolvemos el tipo de acción con la información que se añadió.
