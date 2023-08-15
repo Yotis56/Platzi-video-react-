@@ -1,4 +1,5 @@
 export const actions = {
+  setState: 'SET_STATE',
   setFavorite: 'SET_FAVORITE',
   deleteFavorite: 'DELETE_FAVORITE',
   login: 'LOGIN_REQUEST',
@@ -6,6 +7,10 @@ export const actions = {
   register: 'REGISTER_REQUEST',
   getVideo: 'GET_VIDEO_SOURCE',
 };
+export const setState = (payload) => ({
+  type: actions.setState,
+  payload,
+});
 
 export const setFavorite = (payload) => ({
   type: actions.setFavorite,

@@ -1,9 +1,9 @@
 //librerías
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 //custom hooks
-// import useInitialState from '../hooks/useInitialState'
-
+import getInitialState from '../services';
+import { setState } from '../actions';
 //componentes
 import Search from '../components/Search';
 import Main from '../components/Main';
@@ -11,30 +11,33 @@ import Main from '../components/Main';
 //estilos
 import '../assets/styles/App.scss';
 
-// const API = 'http://localhost:3000/initialState'
-// const initialState = useInitialState(API)
+const API = 'http://localhost:3000/initialState';
 
-function Home({ myList, trends, originals }) {
-  const list = {
-    myList,
-    trends,
-    originals,
-  };
+function Home({ mylist, trends, originals, setState }) {
+
+  useEffect(async () => {
+    const data = await getInitialState(API);
+    setState(data);
+  }, []);
+
   return (
     <>
       <Search
         title='¿Qué quieres ver hoy?'
-        placeholder_text='Buscar...'
+        placeholderText='Buscar...'
       />
-      <Main data={list} />
+      <Main mylist={mylist} trends={trends} originals={originals} />
     </>
   );
 }
 const mapStateToProps = (state) => {
   return {
-    myList: state.myList,
+    mylist: state.mylist,
     trends: state.trends,
     originals: state.originals,
   };
 };
-export default connect(mapStateToProps)(Home);
+const mapDispatchToProps = {
+  setState,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -12,9 +12,9 @@ import removeIcon from '../assets/images/remove-icon.png';
 import '../assets/styles/components/CarouselItem.scss';
 
 const CarouselItem = (props) => {
-  const { id, cover, title, year, contentRating, duration, description, from, deleteFavorite } = props;
+  const { id, cover, title, year, contentRating, duration, description, from, deleteFavorite, setFavorite } = props;
   const handleSetFavorite = () => {
-    props.setFavorite({
+    setFavorite({
       id, cover, title, year, contentRating, duration, description,
     });
   };

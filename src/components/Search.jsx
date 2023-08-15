@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
+import '../assets/styles/components/Search.scss';
 
-import '../assets/styles/components/Search.scss'
-
-const Search = (props) => (
-  <section className="main">
-    <h2 className="main__title">{props.title}</h2>
-    <input type="text" className="input" placeholder={props.placeholder_text}/>
+const Search = ({ title, placeholderText }) => (
+  <section className='main'>
+    <h2 className='main__title'>{title}</h2>
+    <input type='text' className='input' placeholder={placeholderText} />
   </section>
-)   
+);
 
-export default Search
+export default Search;

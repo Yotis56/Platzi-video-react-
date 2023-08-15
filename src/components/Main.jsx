@@ -6,19 +6,19 @@ import Carousel from './Carousel';
 
 //styles
 
-const Main = ({ data }) => (
+const Main = ({ mylist, trends, originals }) => (
   <>
-    {data.myList.length > 0 && (
+    {mylist.length > 0 && (
       <Categories text='Mi lista'>
-        <Carousel videos={data.myList} from='myList' />
+        <Carousel videos={mylist} from='myList' />
       </Categories>
     )}
     <Categories text='Tendencias'>
-      <Carousel videos={data.trends} from='trends' />
+      <Carousel videos={trends} from='trends' />
     </Categories>
-    {data.originals.length > 0 && (
+    {originals.length > 0 && (
       <Categories text='Originales de Platzi'>
-        <Carousel videos={data.originals} from='originals' />
+        <Carousel videos={originals} from='originals' />
       </Categories>
     )}
   </>
