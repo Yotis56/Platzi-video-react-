@@ -1,9 +1,7 @@
 //librerías
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 //custom hooks
-import getInitialState from '../services';
-import { setState } from '../actions';
 //componentes
 import Search from '../components/Search';
 import Main from '../components/Main';
@@ -11,14 +9,7 @@ import Main from '../components/Main';
 //estilos
 import '../assets/styles/App.scss';
 
-const API = 'http://localhost:3000/initialState';
-
-function Home({ mylist, trends, originals, setState }) {
-
-  useEffect(async () => {
-    const data = await getInitialState(API);
-    setState(data);
-  }, []);
+function Home({ mylist, trends, originals }) {
 
   return (
     <>
@@ -37,7 +28,5 @@ const mapStateToProps = (state) => {
     originals: state.originals,
   };
 };
-const mapDispatchToProps = {
-  setState,
-};
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+
+export default connect(mapStateToProps)(Home);

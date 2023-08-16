@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 //actions
 import { loginRequest } from '../actions';
 //assets
@@ -25,7 +25,7 @@ const Login = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.loginRequest(form);
-    Redirect('/');
+    props.history.push('/');
   };
 
   return (
