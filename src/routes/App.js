@@ -12,7 +12,7 @@ import Player from '../pages/Player';
 import getInitialState from '../services';
 import { setState } from '../actions';
 
-const API = 'http://localhost:3000/initialState';
+const API = 'http://localhost:3001/initialState';
 
 const App = ({ setState }) => {
 
