@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 //páginas
@@ -22,7 +22,7 @@ const App = ({ setState }) => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Switch>
           <Route exact path='/' component={Home} />
@@ -32,7 +32,7 @@ const App = ({ setState }) => {
           <Route component={NotFound} />
         </Switch>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
